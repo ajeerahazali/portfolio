@@ -7,7 +7,7 @@
 
 An interactive point-and-click portfolio built as a retro pixel-art field office. Explore a virtual workspace with interactive hotspots, a CRT terminal, and ambient audio — all running in the browser.
 
-**Live site:** [https://ajeerah-portfolio.vercel.app](https://ajeerah-portfolio.vercel.app)
+**Live site:** [https://portfolio.vercel.app](https://portfolio.vercel.app)
 
 ---
 
@@ -136,7 +136,7 @@ ajeerah-portfolio/
 
 ```bash
 # Clone the repository
-git clone https://github.com/ajeerahazali/ajeerah-portfolio.git
+git clone https://github.com/ajeerahazali/portfolio.git
 cd ajeerah-portfolio
 
 # Install dependencies
@@ -175,7 +175,7 @@ The project is designed to deploy seamlessly on **Vercel** (recommended) or any 
 
 ### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ajeerahazali/ajeerah-portfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ajeerahazali/portfolio)
 
 Alternatively, for a fully static export:
 
