@@ -1,0 +1,5 @@
+pnpmOnFail: ignore
+
+minimumReleaseAgeExclude:
+  - '@next/*'
+  - next

@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}
+
+:root { color-scheme: dark; --background: #101713; --foreground: #dce9d7; --border: #334b3b; --ring: #6ee7b7; }
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body { margin: 0; background: var(--background); color: var(--foreground); }
+
+.hotspot { position: absolute; z-index: 5; cursor: pointer; background: transparent; border: 1px solid transparent; transition: background .25s, border-color .25s, box-shadow .25s; }
+.hotspot:hover, .hotspot:focus-visible { background: rgba(124, 255, 143, .10); border-color: rgba(174, 255, 170, .75); box-shadow: inset 0 0 25px rgba(97, 255, 119, .14), 0 0 15px rgba(97, 255, 119, .12); outline: none; }
+.hotspot-label { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 1px solid rgba(174, 255, 170, .8); background: rgba(5, 18, 9, .88); padding: 4px 7px; color: #c8ffd0; font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .16em; white-space: nowrap; opacity: 0; pointer-events: none; text-shadow: 0 0 8px rgba(116, 245, 156, .65); transition: opacity .2s, transform .2s; }
+.hotspot:hover .hotspot-label, .hotspot:focus-visible .hotspot-label { opacity: 1; transform: translate(-50%, -50%) scale(1.02); }
+@media (max-width: 640px) { .hotspot-label { font-size: 8px; padding: 3px 5px; letter-spacing: .1em; } }
+.scanlines::before { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 10; background: linear-gradient(rgba(18,16,16,0) 50%,rgba(0,0,0,0.25) 50%), linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06)); background-size: 100% 4px, 3px 100%; opacity: .7; }
+.terminal-input { display: block; width: 100%; border: 1px solid rgba(255,255,255,.2); background: rgba(0,0,0,.3); padding: 8px; color: #e8ddd0; outline: none; }.terminal-input:focus { border-color: rgba(255,255,255,.5); box-shadow: 0 0 10px rgba(255,255,255,.1); }.terminal-input::placeholder { color: rgba(232,221,208,.4); }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.animate-blink { animation: blink 1s step-end infinite; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
