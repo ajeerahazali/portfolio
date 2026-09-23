@@ -7,7 +7,7 @@
 
 An interactive point-and-click portfolio built as a retro pixel-art field office. Explore a virtual workspace with interactive hotspots, a CRT terminal, and ambient audio — all running in the browser.
 
-**Live site:** [https://portfolio.vercel.app](https://portfolio.vercel.app)
+**Live site:** [https://ajeerahazali-portfolio.vercel.app](https://ajeerahazali-portfolio.vercel.app)
 
 ---
 
