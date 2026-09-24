@@ -94,9 +94,7 @@ export function Modal({ type, close, typeLog }: ModalProps) {
           <div className="flex-1 min-h-0 overflow-y-auto">
             {content.body}
           </div>
-          {!isNoticeboard && !isInventory && !isResume && type !== 'contact' && (
-            <button onClick={close} className="mt-5 text-[10px] opacity-60 hover:opacity-100">[CLOSE FILE]</button>
-          )}
+          
         </div>
       </div>
     </div>

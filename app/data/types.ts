@@ -14,7 +14,6 @@ export interface NoticeboardNote {
 export interface Project {
   id: string
   label: string
-  tech: string[]
   detail: string
   href: string
 }

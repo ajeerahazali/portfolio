@@ -97,10 +97,6 @@ retro-office-portfolio/
 │   │   └── modal/
 │   │       ├── Modal.tsx           # Overlay modal for resume/skills/noticeboard/contact
 │   │       └── SkillTabs.tsx       # Tabbed skills/languages/certifications viewer
-│   ├── hooks/
-│   │   ├── useTypewriter.ts        # Typewriter animation hook (effect + imperative)
-│   │   ├── useKeyboardNavigation.ts # Arrow-key list navigation hook
-│   │   └── useZoom.ts              # Hotspot zoom-in animation hook
 │   ├── data/
 │   │   ├── types.ts                # Shared TypeScript types
 │   │   ├── projects.ts             # Project entries for SYS_ARCHIVE/
