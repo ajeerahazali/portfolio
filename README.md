@@ -83,7 +83,7 @@ The design language is inspired by late-90s point-and-click adventure games, wit
 ## Project Structure
 
 ```
-ajeerah-portfolio/
+retro-office-portfolio/
 ├── app/
 │   ├── layout.tsx                  # Root layout (metadata, viewport, Analytics)
 │   ├── globals.css                 # Tailwind + custom hotspot/scanline/terminal styles
@@ -136,8 +136,8 @@ ajeerah-portfolio/
 
 ```bash
 # Clone the repository
-git clone https://github.com/ajeerahazali/portfolio.git
-cd ajeerah-portfolio
+git clone https://github.com/ajeerahazali/retro-office-portfolio.git
+cd retro-office-portfolio
 
 # Install dependencies
 pnpm install
@@ -175,7 +175,7 @@ The project is designed to deploy seamlessly on **Vercel** (recommended) or any 
 
 ### Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ajeerahazali/portfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ajeerahazali/retro-office-portfolio)
 
 Alternatively, for a fully static export:
 
@@ -215,9 +215,13 @@ export const PROJECTS: Project[] = [
 
 ### Updating the resume
 
-Replace `public/downloads/my_resume.pdf` with your PDF.
+The resume appears in two places — both need replacing with your own info:
 
-Edit the resume body JSX in `app/data/content.tsx` (`RESUME_BODY`).
+**1. Downloadable PDF** — Replace `public/downloads/my_resume.pdf` with your own resume file. The `[SAVE_RECORD]` button in the Records modal links to this file.
+
+**2. On-screen content** — Edit the `RESUME_BODY` JSX in `app/data/content.tsx` to update the inline resume shown in the Records modal. This is separate from the PDF.
+
+The repo contains my personal resume — replace both before deploying a fork.
 
 ### Customising the noticeboard
 
