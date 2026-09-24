@@ -246,7 +246,7 @@ export const NOTICEBOARD_NOTES: NoticeboardNote[] = [
 The contact form uses [Web3Forms](https://web3forms.com). You must provide your own access key — create a `.env` file:
 
 ```bash
-echo "NEXT_PUBLIC_WEB3FORMS_KEY=your-key-here" > .env
+echo "NEXT_PUBLIC_WEB3FORMS=your-key-here" > .env
 ```
 
 The form will not submit without this variable set. See `.env.example` for the template.

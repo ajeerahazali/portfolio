@@ -25,9 +25,9 @@ export function Modal({ type, close, typeLog }: ModalProps) {
       e.preventDefault()
       setSubmitting(true)
       typeLog('Transmitting...')
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS
       if (!accessKey) {
-        typeLog('Config error: WEB3FORMS_KEY not set.')
+        typeLog('Config error: WEB3FORMS not set.')
         setSubmitting(false)
         return
       }
