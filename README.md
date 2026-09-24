@@ -239,7 +239,13 @@ export const NOTICEBOARD_NOTES: NoticeboardNote[] = [
 
 ### Updating contact form
 
-The contact form uses [Web3Forms](https://web3forms.com). Replace the `access_key` in `app/components/modal/Modal.tsx` with your own key.
+The contact form uses [Web3Forms](https://web3forms.com). You must provide your own access key — create a `.env` file:
+
+```bash
+echo "NEXT_PUBLIC_WEB3FORMS_KEY=your-key-here" > .env
+```
+
+The form will not submit without this variable set. See `.env.example` for the template.
 
 ---
 

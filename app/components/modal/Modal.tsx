@@ -25,12 +25,18 @@ export function Modal({ type, close, typeLog }: ModalProps) {
       e.preventDefault()
       setSubmitting(true)
       typeLog('Transmitting...')
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY
+      if (!accessKey) {
+        typeLog('Config error: WEB3FORMS_KEY not set.')
+        setSubmitting(false)
+        return
+      }
       try {
         const res = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            access_key: 'cb43bd0b-6fc2-4df3-9a55-e45c68c25be3',
+            access_key: accessKey,
             name: nameRef.current?.value ?? '',
             email: emailRef.current?.value ?? '',
             message: messageRef.current?.value ?? '',
